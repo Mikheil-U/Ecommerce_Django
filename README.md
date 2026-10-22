@@ -60,11 +60,11 @@ python manage.py runserver
 * ecommerce/shopping_cart/: Manages the shopping cart operations, including adding, updating, and deleting items.
 * ecommerce/store/: Handles product browsing, category filtering, and displaying product details.
 
-![image](https://github.com/user-attachments/assets/5dbde05c-9759-4811-882f-eecadb75ace2)
-![image](https://github.com/user-attachments/assets/9a55e3d9-2fcc-49bb-95fb-934d60688c0d)
-![image](https://github.com/user-attachments/assets/88d19629-fd7f-4570-bac3-74eb6b9a666d)
-![image](https://github.com/user-attachments/assets/280cff38-a251-4719-a8e8-f8543769c83c)
-
+<img width="2478" height="1918" alt="image" src="https://github.com/user-attachments/assets/387e2b9d-5259-4960-8644-45fc4f178560" />
+<img width="2526" height="1922" alt="image" src="https://github.com/user-attachments/assets/64a67f5c-0fdb-4b1e-9cc3-377a7795b4ca" />
+<img width="1302" height="962" alt="image" src="https://github.com/user-attachments/assets/0a31e61e-6831-473b-9b59-88f2c99c45df" />
+<img width="1300" height="951" alt="image" src="https://github.com/user-attachments/assets/7d547ea6-f821-48cb-9578-a8796c9cfb4c" />
+<img width="773" height="955" alt="image" src="https://github.com/user-attachments/assets/252a8394-1b15-4d1c-bc28-d2aae6da5a0b" />
 
 
 
