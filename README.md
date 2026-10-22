@@ -5,6 +5,8 @@
 This is a feature-rich e-commerce website built using Django. The platform allows users to browse products, add them to a shopping cart, and complete purchases. It also supports user registration, authentication, email verification, and order tracking. The admin panel is used for managing products, categories, and orders. The website is designed to ensure an efficient and secure shopping experience.
 
 ![image](https://github.com/user-attachments/assets/dee5f208-d52b-40eb-8c82-3293a172eca3)
+<img width="3420" height="1924" alt="image" src="https://github.com/user-attachments/assets/e320681b-092e-446a-acb1-0a864afe2711" />
+
 
 
 
@@ -62,6 +64,7 @@ python manage.py runserver
 ![image](https://github.com/user-attachments/assets/9a55e3d9-2fcc-49bb-95fb-934d60688c0d)
 ![image](https://github.com/user-attachments/assets/88d19629-fd7f-4570-bac3-74eb6b9a666d)
 ![image](https://github.com/user-attachments/assets/280cff38-a251-4719-a8e8-f8543769c83c)
+
 
 
 
