@@ -32,8 +32,8 @@ This is a feature-rich e-commerce website built using Django. The platform allow
 
 1. Clone the repository:
 ```
-   git clone https://github.com/Mikheil-U/Projects_Django.git
-   cd ecommerce
+   git clone https://github.com/Mikheil-U/Ecommerce_Django.git
+   cd Ecommerce_Django
 ```
 2. Create a virtual environment and install dependencies:
 ```
@@ -43,7 +43,6 @@ pip install -r requirements.txt
 ```
 3. Apply Migrations: 
 ```
-python manage.py makemigrations
 python manage.py migrate
 ```
 4. Run the development server:

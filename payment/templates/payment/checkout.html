@@ -1,15 +1,10 @@
-{% include "store/base.html" %}
+{% extends 'store/base.html' %}
 {% load static %}
 {% block content %}
-<style>
-    body 
-    {
-        background-color: gray;
-    }
-</style>
-    <body>
+
+
         <br>
-        <div class="container bg-white shadow-md p-5" style="width:500px; border-radius:20px;">
+        <div class="container bg-white shadow-md p-5" style="max-width:560px;">
             <form id="form" onsubmit="event.preventDefault();">
                 <div>
                     <h3> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> &nbsp; Complete your order </h3>
@@ -17,7 +12,7 @@
                     <hr>
                     <br>
                     <div class="form-field validate">
-                    
+
                         <input class="form-control validate" id="name" type="text" placeholder="Full name*" autocomplete="off" value="{{shipping.full_name}}" required>
 
                     </div>
@@ -29,7 +24,7 @@
 
                     </div>
                     <br>
-                    
+
                     <div class="form-field validate">
 
                         <input class="form-control validate" id="address1" type="text" placeholder="Address 1*" autocomplete="off" value="{{shipping.address1}}" required>
@@ -62,30 +57,30 @@
                 <br>
 
                <!-- <button id="complete-order" type="submit" class="btn btn-primary navbar-btn text-white"> &nbsp; Complete order </button> -->
-            
+
                 <div id="paypal-button-container">
 
                 </div>
                 <!-- PayPal client ID integration -->
 
             <script src="https://www.paypal.com/sdk/js?client-id=ASUpsyXX0oEWDtMDthB-wN6y0X-KA7hoRB4SSpDG7BZBi8APoG2sqfADN4vH8bsXXtLSFVM2cPW7Tvxf&currency=USD&intent=capture&enable-funding=venmo" data-sdk-integration-source="integrationbuilder"></script>
-            
+
         </form>
 
         </div>
         <br>
 
-    </body>
 
-    
+
+
 
     <!-- Ajax integration -->
     <script>
 
     // total price
-    var total_price = '{{cart.get_total}}';  // obtained from cart.py 
+    var total_price = '{{cart.get_total}}';  // obtained from cart.py
 
-    // PayPal JS SDK  
+    // PayPal JS SDK
     const paypalButtonsComponent = paypal.Buttons({
         // optional styling for buttons
         // https://developer.paypal.com/docs/checkout/standard/customize/buttons-style-guide/
@@ -96,13 +91,13 @@
         },
         // Paypal button validation. Disable until the shipping address is entered and is valid.
         onInit: function(data, actions){
-            
+
             actions.disable();
 
             // Complete order - NO SHIPPING address stored(guest users).
             document.querySelectorAll('.validate').forEach(item => {
                 item.addEventListener('keyup', event => {
-                    
+
                     // The requred fields are filled out
                     var order_verififed = 'Yes';
 
@@ -127,7 +122,7 @@
 
                 });
             });
-            // Complete order - WITH SHIPPING address stored(registered users). 
+            // Complete order - WITH SHIPPING address stored(registered users).
                     var order_verififed = 'Yes';
 
                     function checkInputs(){
@@ -166,7 +161,7 @@
 
             return actions.order.create(createOrderPayload);
         },
-        
+
 
         // finalize the transaction
         onApprove: (data, actions) => {
@@ -176,7 +171,7 @@
 
             // perform an AJAX request
             $.ajax({
-                type: 'POST', 
+                type: 'POST',
                 url: '{% url "complete-order" %}',  // AJAX request will be sent here(Django reverse URL for 'complete-order')
                 data: {  // Specify the data to be sent to the server
                     name: $('#name').val(),
@@ -217,14 +212,14 @@
         });
 
 
-    // Click event for complete checkout. 
+    // Click event for complete checkout.
     // $(document).on('submit', function(e){
 
     //     e.preventDefault();  // prevent the default behavior of the button (e.g., form submission or navigation)
 
     //     // perform an AJAX request
     //     $.ajax({
-    //         type: 'POST', 
+    //         type: 'POST',
     //         url: '{% url "complete-order" %}',  // AJAX request will be sent here(Django reverse URL for 'complete-order')
     //         data: {  // Specify the data to be sent to the server
     //             name: $('#name').val(),

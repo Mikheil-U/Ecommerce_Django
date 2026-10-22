@@ -4,16 +4,16 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container product-detail">
 
-    <main class="pt-5">
+    <section class="pt-5">
 
         <div class="row g-3">
 
             <div class="col-md-5 col-lg-5 order-md-first bg-light">
-            
-                <img class="img-fluid mx-auto d-block" alt="Responsive image" src="{{product.image.url}}"> <!-- Product image -->
-            
+
+                <img class="img-fluid mx-auto d-block" alt="{{ product.title }}" src="{{product.image.url}}"> <!-- Product image -->
+
             </div>
 
             <div class="col-md-7 col-lg-7 ps-md-3 ps-lg-5">
@@ -39,41 +39,41 @@
                     </div>
 
                     <div class="col">
-              
+
                         <div class="row p-3">
-              
+
                             <div class="col-6">
-              
-                               
+
+
                                 <label for="select">Qty</label>
-                                
-                                &nbsp; 
-                               
+
+                                &nbsp;
+
                                 <select id="select">
-              
+
                                     <option value="1">1</option>
-              
+
                                     <option value="2">2</option>
-              
+
                                     <option value="3">3</option>
-              
+
                                     <option value="4">4</option>
-              
+
                                 </select>
 
                             </div>
 
                             <div class="col-6 text-end">
-                                
-                                <button type="button" id="add-button" value="{{product.id}}" class="btn btn-secondary btn-sm">
-                        
-                                Add to cart 
-                            
-                                </button> 
-                            
+
+                                <button type="button" id="add-button" value="{{product.id}}" class="btn btn-primary">
+
+                                Add to cart
+
+                                </button>
+
 
                             </div>
-                        
+
                         </div>
 
                     </div>
@@ -84,7 +84,7 @@
 
         </div>
 
-    </main>
+    </section>
 
     <br>
 
@@ -92,14 +92,14 @@
 
 <script>
 
-    // Click event for 'add-button' 
+    // Click event for 'add-button'
     $(document).on('click', '#add-button', function(e){
 
         e.preventDefault();  // prevent the default behavior of the button (e.g., form submission or navigation)
 
         // perform an AJAX request
         $.ajax({
-            type: 'POST', 
+            type: 'POST',
             url: '{% url "cart-add" %}',  // AJAX request will be sent here(Django reverse URL for 'cart-add')
             data: {  // Specify the data to be sent to the server
                 product_id: $('#add-button').val(),  // send the product ID (retreived from the value of the button id="add-button" from HTML)

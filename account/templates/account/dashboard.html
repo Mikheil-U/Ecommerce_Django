@@ -1,20 +1,16 @@
-{% include 'store/base.html' %}
+{% extends 'store/base.html' %}
 {% load static %}
 
 {% block content %}
-<style>
-    body{
-        background-color: gray;
-    }
-</style>
 
-<body>
+
+
         <br>
-        
+
     <div class="container bg-white shadow-md p-5 form-layout">
         <h4>Welcome, {{user}}</h4>
         <hr>
-        
+
         <li> Track your orders. </li>
         <li> Manage your account. </li>
 
@@ -38,7 +34,7 @@
         <a class="btn btn-primary navbar-btn text-white" type="button"  href="{% url 'profile-management' %}"> Profile Management </a> <br> <br>
     </div>
     <br>
-    
+
     <div class="container bg-white shadow-md p-5 form-layout">
         <h4> Manage shipping </h4>
         <hr>
@@ -48,6 +44,6 @@
     <br>
 
 
-</body>
+
 
 {% endblock %}

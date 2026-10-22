@@ -1,13 +1,24 @@
-.venv
+# Python and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Local Django data and uploads
+db.sqlite3
+*.sqlite3-journal
+media/
+staticfiles/
 *.log
 *.pot
-*.pyc
-__pycache__
-db.sqlite3
-media
-.venv 
-env/ 
-venv/ 
-ENV/ 
-env.bak/ 
-venv.bak/ 
+local_settings.py
+
+# Local configuration
+.env
+.env.*
+!.env.example
+.DS_Store
